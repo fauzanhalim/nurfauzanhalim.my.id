@@ -1,6 +1,6 @@
 export const SkillsData = [
   {
-    type: "Front-End",
+    type: "Frontend",
     list: [
       {
         name: "ReactJS",
@@ -43,7 +43,7 @@ export const SkillsData = [
     ],
   },
   {
-    type: "Other Skills",
+    type: "Backend",
     list: [
       {
         name: "Go Language",
@@ -58,9 +58,14 @@ export const SkillsData = [
         icon: <i class="devicon-postgresql-plain colored"></i>
       },
       {
-        name: "mysql",
-        icon: <i class="devicon-mysql-plain colored"></i>
+        name: "php",
+        icon: <i class="devicon-php-plain colored"></i>
       }
+      {
+        name: "Laravel",
+        icon: <i class="devicon-larvel-plain colored"></i>
+      }
+      
     ],
   },
 ];
