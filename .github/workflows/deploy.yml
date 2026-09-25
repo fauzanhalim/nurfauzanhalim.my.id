@@ -1,4 +1,4 @@
-name: Deploy Build Folder to Pages
+name: Deploy React Portfolio to Pages
 
 on:
   push:
@@ -24,10 +24,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React Application
+        run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Langsung mengunggah folder build yang sudah ada tanpa install npm
           path: ./build
 
       - name: Deploy to GitHub Pages
